@@ -1,4 +1,4 @@
-####Given an array nums of integers, return how many of them contain an even number of digits.
+### Given an array nums of integers, return how many of them contain an even number of digits.
 
 Input: nums = [12,345,2,6,7896]
 
@@ -17,3 +17,19 @@ Explanation:
 7896 contains 4 digits (even number of digits).
 
 Therefore only 12 and 7896 contain an even number of digits.
+
+```js
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var findNumbers = function (nums) {
+        let i = 0, len = nums.length, count = 0
+        while (i < len) {
+            if (nums[i].toString().length % 2 === 0) count++
+            i++
+        }
+        return count
+    };
+
+```
